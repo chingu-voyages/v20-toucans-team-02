@@ -1,0 +1,15 @@
+@import "_reset.scss";
+@import "_variables.scss";
+@import "_layout.scss";
+@import "_extends.scss";
+
+/* components*/
+@import "components/buttons";
+@import "components/texts";
+@import "components/containers";
+
+/* sections */
+@import "sections/navbar";
+@import "sections/main";
+@import "sections/popup";
+@import "sections/footer";
