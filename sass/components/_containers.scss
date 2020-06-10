@@ -1,0 +1,66 @@
+section {
+  @include flex-column;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100%;
+  background-color: $bg-white;
+  border-radius: 5px;
+  padding: 5%;
+
+  @media screen and (min-width: $min-md) {
+    min-width: 650px;
+    min-height: 75%;
+  }
+
+  @media screen and (min-width: $min-lg) {
+    min-width: 850px;
+  }
+
+  @media screen and (min-width: $min-xl) {
+  }
+
+  @media screen and (min-width: $min-xxl) {
+    max-width: 1000px;
+  }
+}
+
+.upper {
+  @include box;
+  padding: 2rem 3.5rem;
+
+  .definitions {
+    list-style: none;
+    counter-reset: li;
+    padding-left: 2rem;
+  }
+
+  li {
+    counter-increment: li;
+    margin: 0 0 0.5rem 0;
+    position: relative;
+  }
+  li::before {
+    content: counter(li);
+    border-radius: 50%;
+    padding: 10px;
+    height: 0.9rem;
+    width: 0.9rem;
+    text-align: center;
+    background-color: $main-blue;
+    color: $bg-white;
+    display: inline-block;
+    position: absolute;
+    font-weight: bold;
+    font-size: 1.5rem;
+    --size: 32px;
+    left: calc(-1 * var(--size) - 10px);
+    line-height: calc(var(--size) - 0.9rem);
+    top: 0;
+  }
+}
+.words {
+  @include box;
+  padding: 1rem 3.5rem;
+  margin-top: 5%;
+  text-align: center;
+}
