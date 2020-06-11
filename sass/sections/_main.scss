@@ -1,0 +1,13 @@
+.page__main {
+  @include flex-column;
+  grid-area: main;
+  grid-row: 2 / 3;
+
+  @media screen and (min-width: $min-sm) {
+    background-image: url(../images/blur-book.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+  }
+}
