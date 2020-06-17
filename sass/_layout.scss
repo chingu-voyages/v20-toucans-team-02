@@ -5,3 +5,23 @@ html {
 body {
   background-color: $bg-white;
 }
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+}
