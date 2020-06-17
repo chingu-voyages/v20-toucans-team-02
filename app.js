@@ -6,11 +6,11 @@ const fetchRandomWord = async () => {
     "http://api.wordnik.com/v4/words.json/randomWord",
     {
       params: {
-        api_key: "ecfgi1h25l9ial3uiqu4e201aaor7odzentfuf3ruogimb1dc",
+        api_key: "1",
       },
     }
   );
-    console.log(random.data.word);
+    console.log(random.data);
   return random.data.word
 };
 
@@ -22,10 +22,11 @@ const fetchDefinition = async () => {
       api_key: "ecfgi1h25l9ial3uiqu4e201aaor7odzentfuf3ruogimb1dc",
     },
   });
-  console.log(wordDefinition)
+  console.log(wordDefinition.data[0].text)
+  console.log(wordDefinition.data)
   for (e of wordDefinition.data) {
-    console.log(this.text); // This is not working yet.
-   }
+    return e.text;
+  };
 };
 
 fetchDefinition();
