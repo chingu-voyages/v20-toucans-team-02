@@ -1,0 +1,28 @@
+.page__header {
+  background: $bg-darkblue;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  grid-area: header;
+  grid-row: 1 / 2;
+
+  .navbar__menu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    justify-content: space-between;
+
+    .app-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-family: $title-font;
+    }
+    .help {
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+    }
+  }
+}

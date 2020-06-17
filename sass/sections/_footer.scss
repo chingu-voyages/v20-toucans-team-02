@@ -1,0 +1,20 @@
+.footer__authors {
+  height: 60px;
+  margin-bottom: 0;
+  text-align: center;
+  background-color: $bg-darkblue;
+  line-height: 60px;
+  grid-area: footer;
+  grid-row: 3 / 4;
+
+  .description__text {
+    color: $bg-white;
+    font-size: 1rem;
+    font-family: $main-font;
+  }
+  span,
+  a {
+    color: $error-color;
+    letter-spacing: 1px;
+  }
+}
