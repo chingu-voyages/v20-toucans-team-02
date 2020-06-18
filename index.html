@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
     <title>Words</title>
 
     <link
@@ -28,7 +29,7 @@
         </nav>
       </header>
       <main class="page__main">
-        <section class="section game1" id="game1">
+        <section class="section game1 hidden" id="game1">
           <div class="upper">
             <ol class="definitions">
               <li class="definition">"a representative form or pattern"</li>
@@ -55,6 +56,26 @@
             </div>
           </div>
         </section>
+        <section class="section dictionary" id="dictionary">
+          <div class="word-form">
+            <form id="dict-form">
+              <input
+                type="text"
+                placeholder="Look up the word ..."
+                name="word"
+              />
+              <button id="search" type="submit">Search</button>
+            </form>
+            <p>
+              Write an English word to find out its 3 most popular definitions.
+            </p>
+          </div>
+          <div class="word-definition">
+            <p><span id="word-def"></span> <span id="pronunciation"></span></p>
+
+            <ol class="definitions" id="dict-definitions"></ol>
+          </div>
+        </section>
       </main>
       <footer class="footer__authors">
         <p class="description__text">
@@ -63,5 +84,42 @@
         </p>
       </footer>
     </div>
+
+    <script src="app.js"></script>
+    <script src="dictionary.js"></script>
   </body>
 </html>
+
+<!-- <li class="definition def-dict">
+                That part of a plant destined to produce seed, and hence
+                including one or both of the sexual organs; an organ or
+                combination of the organs of reproduction, whether inclosed by a
+                circle of foliar parts or not. A complete
+                <ex>flower</ex> consists of two essential parts, the stamens and
+                the pistil, and two floral envelopes, the corolla and callyx. In
+                mosses the flowers consist of a few special leaves surrounding
+                or subtending organs called archegonia. See <er>Blossom</er>,
+                and <er>Corolla</er>.
+              </li>
+              <li class="definition def-dict">
+                That part of a plant destined to produce seed, and hence
+                including one or both of the sexual organs; an organ or
+                combination of the organs of reproduction, whether inclosed by a
+                circle of foliar parts or not. A complete
+                <ex>flower</ex> consists of two essential parts, the stamens and
+                the pistil, and two floral envelopes, the corolla and callyx. In
+                mosses the flowers consist of a few special leaves surrounding
+                or subtending organs called archegonia. See <er>Blossom</er>,
+                and <er>Corolla</er>.
+              </li>
+              <li class="definition def-dict">
+                That part of a plant destined to produce seed, and hence
+                including one or both of the sexual organs; an organ or
+                combination of the organs of reproduction, whether inclosed by a
+                circle of foliar parts or not. A complete
+                <ex>flower</ex> consists of two essential parts, the stamens and
+                the pistil, and two floral envelopes, the corolla and callyx. In
+                mosses the flowers consist of a few special leaves surrounding
+                or subtending organs called archegonia. See <er>Blossom</er>,
+                and <er>Corolla</er>.
+              </li> -->

@@ -1,3 +1,20 @@
 a {
   color: $bg-white;
 }
+.word-definition {
+  @include bullets;
+  @include flex-column;
+  padding: 5%;
+  line-height: 1.5;
+  li {
+    padding: 0 2rem 2rem 1rem;
+  }
+}
+
+#word-def {
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+}
+.definitions {
+  padding-top: 2.5rem;
+}
