@@ -9,7 +9,7 @@ const fetchRandomWord = async () => {
     "http://api.wordnik.com/v4/words.json/randomWord",
     {
       params: {
-        api_key: "ecfgi1h25l9ial3uiqu4e201aaor7odzentfuf3ruogimb1dc",
+        api_key: "a",
       },
     }
   );
@@ -22,14 +22,13 @@ const fetchDefinition = async () => {
 
   const wordDefinition = await axios.get(definitionURL, {
     params: {
-      api_key: "ecfgi1h25l9ial3uiqu4e201aaor7odzentfuf3ruogimb1dc",
+      api_key: "a",
     },
   });
 
   return wordDefinition;
   };
   
-const Definition = fetchDefinition();
-console.log(Definition);
+fetchDefinition();
 
 /* document.addEventListener("DOMContentLoaded", ) */
