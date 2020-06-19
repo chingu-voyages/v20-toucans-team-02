@@ -28,11 +28,7 @@ const fetchDefinition = async () => {
   console.log(wordDefinition);
   return wordDefinition;
   };
-
-  const displayDef = async () => {
-    
-  };
-
+  
 const wordDefinition = fetchDefinition();
 console.log(wordDefinition);
 
