@@ -25,12 +25,11 @@ const fetchDefinition = async () => {
       api_key: "ecfgi1h25l9ial3uiqu4e201aaor7odzentfuf3ruogimb1dc",
     },
   });
-  console.log(wordDefinition);
+
   return wordDefinition;
   };
   
-const wordDefinition = fetchDefinition();
-console.log(wordDefinition);
-
+const Definition = fetchDefinition();
+console.log(Definition);
 
 /* document.addEventListener("DOMContentLoaded", ) */
