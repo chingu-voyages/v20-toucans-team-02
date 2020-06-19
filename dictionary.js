@@ -39,12 +39,13 @@ function getDefinition(qry) {
 
 function displayDefinition(definitions) {
   wordDef.innerHTML = word.value;
+
   try {
     definitions.forEach((item) => {
       let elem = document.createElement("li");
       elem.classList.add("definition", "def-dict");
       elem.innerHTML = item.text;
-      dictDefList.style.color = "ffffffs";
+      dictDefList.style.color = "ffffff";
       dictDefList.appendChild(elem);
     });
   } catch {
