@@ -7,7 +7,7 @@ const dictDefList = document.getElementById("dict-definitions");
 // "https://api.wordnik.com/v4/words.json/wordOfTheDay?api_key="
 
 const api = {
-  key: "ecfgi1h25l9ial3uiqu4e201aaor7odzentfuf3ruogimb1dc",
+  key: "",
   baseurl: "https://api.wordnik.com/v4/word.json",
 };
 
