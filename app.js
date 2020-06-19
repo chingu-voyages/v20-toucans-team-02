@@ -19,18 +19,22 @@ const fetchRandomWord = async () => {
 const fetchDefinition = async () => {
   const randomWord = await fetchRandomWord();
   const definitionURL = `http://api.wordnik.com/v4/word.json/${randomWord}/definitions`;
+
   const wordDefinition = await axios.get(definitionURL, {
     params: {
       api_key: "ecfgi1h25l9ial3uiqu4e201aaor7odzentfuf3ruogimb1dc",
     },
   });
-  for (e of wordDefinition.data) {
-    console.log(e.text);
-  }
-};
+  console.log(wordDefinition);
+  return wordDefinition;
+  };
 
-// async on load?
+  const displayDef = async () => {
+    
+  };
+
 const wordDefinition = fetchDefinition();
 console.log(wordDefinition);
+
 
 /* document.addEventListener("DOMContentLoaded", ) */
