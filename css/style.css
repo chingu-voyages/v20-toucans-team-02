@@ -255,7 +255,7 @@ section {
   top: 0;
 }
 
-.words {
+/* .words {
   background-color: #25274d;
   color: #ffffff;
   border-radius: 5px;
@@ -263,7 +263,7 @@ section {
   padding: 1rem 3.5rem;
   margin-top: 5%;
   text-align: center;
-}
+} */
 
 /* sections */
 .page__header {
@@ -365,3 +365,18 @@ section {
   letter-spacing: 1px;
 }
 /*# sourceMappingURL=style.css.map */
+
+.definition {
+  color: white;
+}
+
+.wordsItem {
+  color: white;
+  background-color: #25274d;
+  margin: 10px;
+  border-radius: 5px;
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  vertical-align: middle;
+}
