@@ -216,7 +216,8 @@ section {
   }
 }
 
-.upper {
+.upper,
+.lower {
   background-color: #25274d;
   color: #ffffff;
   border-radius: 5px;
@@ -255,7 +256,7 @@ section {
   top: 0;
 }
 
-/* .words {
+.words {
   background-color: #25274d;
   color: #ffffff;
   border-radius: 5px;
@@ -263,7 +264,7 @@ section {
   padding: 1rem 3.5rem;
   margin-top: 5%;
   text-align: center;
-} */
+}
 
 /* sections */
 .page__header {
