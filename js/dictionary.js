@@ -3,11 +3,12 @@ const word = inputs["word"];
 const searchBtn = document.getElementById("search");
 let wordDef = document.getElementById("word-def");
 const dictDefList = document.getElementById("dict-definitions");
+const section = document.getElementById('dictionary');
 
 // "https://api.wordnik.com/v4/words.json/wordOfTheDay?api_key="
 
 const api = {
-  key: "",
+  key: "ecfgi1h25l9ial3uiqu4e201aaor7odzentfuf3ruogimb1dc",
   baseurl: "https://api.wordnik.com/v4/word.json",
 };
 
@@ -38,6 +39,7 @@ function getDefinition(qry) {
 }
 
 function displayDefinition(definitions) {
+
   wordDef.innerHTML = word.value;
 
   try {
@@ -53,10 +55,13 @@ function displayDefinition(definitions) {
     dictDefList.innerHTML =
       "It seems we don't have this word in our dictionary";
   }
+
 }
 
 function resetForm() {
   word.value = "";
   wordDef.innerHTML = "";
   dictDefList.innerHTML = "";
+  section.style.color = "ffffff";
+
 }

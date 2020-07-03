@@ -269,7 +269,7 @@ section {
   min-width: 320px;
   min-height: 100%;
   border-radius: 5px;
-  padding: 5% 0;
+  padding: 5%;
   background-color: #ffffff;
 }
 
@@ -354,7 +354,6 @@ section .words {
 @media screen and (min-width: 768px) {
   .dictionary {
     margin: 5%;
-    padding: 7%;
   }
 }
 
@@ -442,16 +441,17 @@ section .words {
           justify-content: space-between;
 }
 
-.page__header .navbar__menu .app-name {
-  font-size: 1.5rem;
-  font-weight: bold;
+.page__header .navbar__menu .nav__item {
+  font-size: 1.2rem;
   letter-spacing: 1px;
   font-family: "Montserrat", sans-serif;
 }
 
-.page__header .navbar__menu .help {
-  font-size: 1.2rem;
+.page__header .navbar__menu .app-name {
+  font-size: 1.5rem;
+  font-weight: bold;
   letter-spacing: 1px;
+  color: #ffffff;
 }
 
 .page__main {
