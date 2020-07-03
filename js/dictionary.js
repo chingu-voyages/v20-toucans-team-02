@@ -63,5 +63,4 @@ function resetForm() {
   wordDef.innerHTML = "";
   dictDefList.innerHTML = "";
   section.style.color = "ffffff";
-
 }
