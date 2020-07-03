@@ -3,9 +3,10 @@ section {
   justify-content: center;
   min-width: 320px;
   min-height: 100%;
-  background-color: $bg-white;
   border-radius: 5px;
   padding: 5%;
+
+  background-color: $bg-white;
 
   @media screen and (min-width: $min-md) {
     min-width: 650px;
@@ -22,45 +23,58 @@ section {
   @media screen and (min-width: $min-xxl) {
     max-width: 1000px;
   }
-}
-
-.upper {
-  @include box;
-  padding: 2rem 3.5rem;
-
-  .definitions {
-    list-style: none;
-    counter-reset: li;
-    padding-left: 2rem;
+  .upper {
+    @include box;
+    padding: 2rem 3.5rem;
+    @include bullets;
   }
-
-  li {
-    counter-increment: li;
-    margin: 0 0 0.5rem 0;
-    position: relative;
-  }
-  li::before {
-    content: counter(li);
-    border-radius: 50%;
-    padding: 10px;
-    height: 0.9rem;
-    width: 0.9rem;
+  .words {
+    @include box;
+    padding: 1rem 3.5rem;
+    margin-top: 5%;
     text-align: center;
-    background-color: $main-blue;
-    color: $bg-white;
-    display: inline-block;
-    position: absolute;
-    font-weight: bold;
-    font-size: 1.5rem;
-    --size: 32px;
-    left: calc(-1 * var(--size) - 10px);
-    line-height: calc(var(--size) - 0.9rem);
-    top: 0;
   }
 }
-.words {
-  @include box;
-  padding: 1rem 3.5rem;
-  margin-top: 5%;
-  text-align: center;
+
+.dictionary {
+  background-color: $bg-darkblue;
+  color: $bg-white;
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  margin: 5% 0;
+  
+  // justify-content: center;
+  // align-items: center;
+  @media screen and (min-width: $min-md) {
+    margin: 5%;
+    
+  }
+
+  @media screen and (min-width: $min-lg) {
+    margin: 5% 10%;
+  }
+
+  @media screen and (min-width: $min-xl) {
+  }
+
+  @media screen and (min-width: $min-xxl) {
+  }
+
+  .word-form {
+    @include flex-column;
+    max-width: 360px;
+    padding: 1% 5%;
+    @media screen and (min-width: $min-md) {
+      max-width: 100%;
+    }
+
+    @media screen and (min-width: $min-lg) {
+    }
+
+    @media screen and (min-width: $min-xl) {
+    }
+
+    @media screen and (min-width: $min-xxl) {
+    }
+  }
 }

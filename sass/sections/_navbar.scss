@@ -14,15 +14,18 @@
     padding-right: 2.5rem;
     justify-content: space-between;
 
+    .nav__item {
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      font-family: $title-font;
+    }
     .app-name {
       font-size: 1.5rem;
       font-weight: bold;
       letter-spacing: 1px;
-      font-family: $title-font;
+      color: $bg-white;
+      
     }
-    .help {
-      font-size: 1.2rem;
-      letter-spacing: 1px;
-    }
+  
   }
 }

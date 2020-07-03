@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <title>Words</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:300,400,500&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <header class="page__header">
+            <nav class="navbar__menu">
+                <li class="nav__item app-name">Word App</li>
+                <li class="nav__item">
+                  <a href="index.html" >Word Game</a>
+                </li>
+               <li class="nav__item">
+                <a href="dictionary.html" class="help">Dictionary</a>
+               </li>
+               
+              </nav>
+        </header>
+        <main class="page__main">
+         
+          <section class="section dictionary" id="dictionary">
+            <div class="word-form">
+              <form id="dict-form">
+                <input
+                  type="text"
+                  placeholder="Look up the word ..."
+                  name="word"
+                />
+                <button id="search" type="submit">Search</button>
+              </form>
+              <p>
+                Write an English word to find out its 3 most popular definitions.
+              </p>
+            </div>
+            <div class="word-definition">
+              <p><span id="word-def"></span> <span id="pronunciation"></span></p>
+  
+              <ol class="definitions" id="dict-definitions"></ol>
+            </div>
+          </section>
+        </main>
+        <footer class="footer__authors">
+          <p class="description__text">
+            Made with <span>&hearts;</span> by <a href="">makneta</a> and
+            <a href="">SebFine</a>
+          </p>
+        </footer>
+      </div> 
+      
+      <script src="js/dictionary.js"></script>
+</body>
+</html>
