@@ -8,7 +8,7 @@ let randomWord = "";
 
 const fetchRandomWord = async () => {
   const random = await axios.get(
-    "http://api.wordnik.com/v4/words.json/randomWord",
+    "https://api.wordnik.com/v4/words.json/randomWord",
     {
       params: {
         api_key: "ecfgi1h25l9ial3uiqu4e201aaor7odzentfuf3ruogimb1dc",
@@ -23,7 +23,7 @@ const fetchRandomWord = async () => {
 const fetchDefinition = async () => {
   const wait = await fetchRandomWord();
   randomWord = wordArr[Math.floor(Math.random() * 3)];
-  const definitionURL = `http://api.wordnik.com/v4/word.json/${randomWord}/definitions`;
+  const definitionURL = `https://api.wordnik.com/v4/word.json/${randomWord}/definitions`;
 
   const wordDefinition = await axios.get(definitionURL, {
     params: {
