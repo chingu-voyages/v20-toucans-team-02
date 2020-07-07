@@ -5,29 +5,41 @@
   line-height: 60px;
   grid-area: header;
   grid-row: 1 / 2;
-  
+
+  .nav__item {      
+    
+    font-family: $title-font;
+  }
+  .app-name {
+    font-size: 1.15rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: $bg-white;      
+  }  
 
   .navbar__menu {
     display: flex;
     flex-direction: row;
     width: 100%;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
     justify-content: space-between;
     align-items: center;
 
+    @media screen and (min-width: $max-sm) {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+
     .nav__item {
       font-size: 1.2rem;
-      letter-spacing: 1px;
-      font-family: $title-font;
+      letter-spacing: 1px;;
     }
     .app-name {
       font-size: 1.5rem;
-      font-weight: bold;
-      letter-spacing: 1px;
-      color: $bg-white;
+    }
       
     }
+
   
   }
 }

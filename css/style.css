@@ -206,7 +206,7 @@ body {
 .helpBtn {
   background: #2e9cca;
   color: white;
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 1.75rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -505,6 +505,17 @@ section .wordsItem {
   grid-row: 1 / 2;
 }
 
+.page__header .nav__item {
+  font-family: "Montserrat", sans-serif;
+}
+
+.page__header .app-name {
+  font-size: 1.15rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
 .page__header .navbar__menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -514,8 +525,8 @@ section .wordsItem {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -524,17 +535,18 @@ section .wordsItem {
           align-items: center;
 }
 
-.page__header .navbar__menu .nav__item {
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  font-family: "Montserrat", sans-serif;
-}
-
-.page__header .navbar__menu .app-name {
-  font-size: 1.5rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #ffffff;
+@media screen and (min-width: 767.99px) {
+  .page__header .navbar__menu {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  .page__header .navbar__menu .nav__item {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+  .page__header .navbar__menu .app-name {
+    font-size: 1.5rem;
+  }
 }
 
 .page__main {
