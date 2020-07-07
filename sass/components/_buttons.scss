@@ -24,3 +24,14 @@
   background: $error-color;
   color: $bg-darkblue;
 }
+
+.helpBtn {    
+    background: $main-blue;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;   
+    letter-spacing: 1px;   
+    margin: auto;
+  }

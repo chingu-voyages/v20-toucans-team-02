@@ -203,6 +203,17 @@ body {
   color: #25274d;
 }
 
+.helpBtn {
+  background: #2e9cca;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  margin: auto;
+}
+
 a {
   color: #ffffff;
 }
@@ -323,6 +334,7 @@ section .upper {
   color: #ffffff;
   border-radius: 5px;
   line-height: 2;
+  max-width: 85%;
   padding: 2rem 3.5rem;
 }
 
@@ -379,6 +391,31 @@ section .win {
 
 section .wordsItem {
   background-color: #25274d;
+}
+
+.modalBg {
+  width: 250px;
+  height: 320px;
+  position: absolute;
+  bottom: 90px;
+  background: #2e9cca;
+  color: white;
+  bottom: 80px;
+  right: 10px;
+  padding: 1.5rem;
+  border: 8px solid #25274d;
+  border-radius: 5px;
+}
+
+.modalBg .game-desc {
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 1.75rem;
+}
+
+.modalBg .help-desc {
+  padding-top: 1rem;
+  font-size: 1.15rem;
 }
 
 .dictionary {
@@ -482,6 +519,9 @@ section .wordsItem {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .page__header .navbar__menu .nav__item {
