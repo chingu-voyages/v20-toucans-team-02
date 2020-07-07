@@ -7,3 +7,20 @@
   outline: none;
   cursor: pointer;
 }
+
+.win,
+.failure  {
+    padding: 1rem 1.5rem;
+    margin: 20px 20px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    
+  }
+.win {
+  background: $main-blue;
+}
+.failure {
+  background: $error-color;
+  color: $bg-darkblue;
+}
