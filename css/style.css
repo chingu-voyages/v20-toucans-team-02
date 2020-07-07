@@ -309,6 +309,7 @@ section .win {
   margin: 20px 20px;
   border-radius: 5px;
   color: white;
+  cursor: pointer;
 }
 section .win {
   background-color: #2e9cca;
