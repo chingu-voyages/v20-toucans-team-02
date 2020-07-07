@@ -6,10 +6,12 @@ modalBg.style.display = "none";
 
 const openHelp = () => {
     modalBg.style.display = "block";
+    helpBtn.style.display = "none";
 };
 
 const closeHelp = () => {
     modalBg.style.display = "none";
+    helpBtn.style.display = "block";
 }
 
 helpBtn.addEventListener('click', openHelp);
