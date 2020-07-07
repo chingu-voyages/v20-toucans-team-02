@@ -43,30 +43,34 @@ const definition = fetchDefinition().then((definitions) => {
     list1.appendChild(elem);
   });
 
-    definitions.wordArr.forEach((el) => {
-      let elem = document.createElement("li");
-      elem.classList.add("wordsItem", "pointer");
-      elem.innerHTML = el;
-  
-      elem.addEventListener("click", () => {
-        if (el === randomWord) {
-          elem.innerHTML = `${el} <br> That's right!`;
-          elem.classList.add("win");
+  definitions.wordArr.forEach((el) => {
+    let elem = document.createElement("li");
+    elem.classList.add("wordsItem", "pointer");
+    elem.innerHTML = el;
+
+    elem.addEventListener("click", () => {
+      if (el === randomWord) {
+        elem.innerHTML = `${el} <br> That's right!`;
+        elem.classList.add("win");
+        elem.classList.remove("wordsItem");
+        win = true;
+        let restart = document.createElement("li");
+        restart.classList.add("win", "pointer");
+        restart.innerHTML = `Play again?`;
+        elem.insertAdjacentElement("afterend", restart);
+        restart.addEventListener("click", () => {
+          location.reload();
+        });
+      } else {
+        if (win === false) {
+          elem.innerHTML = `${el} <br><br>That's not correct... <br> Try again!`;
+          elem.classList.add("failure");
           elem.classList.remove("wordsItem");
-          win = true;
-          let restart = document.createElement("li");
-          restart.classList.add("win", "pointer");
-          restart.innerHTML = `Play again?`;
-          elem.insertAdjacentElement("afterend", restart);
-          restart.addEventListener("click", () => {
-            location.reload();
-          });
-        } else {
-          if (win === false) {
-            elem.innerHTML = `${el} <br>That's not correct... <br> Try again!`;
-          }
+          failure = true;
+
         }
-      });
-      showWord.appendChild(elem);
+      }
     });
+    showWord.appendChild(elem);
   });
+});
