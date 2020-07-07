@@ -21,7 +21,7 @@ function eventListeners() {
     event.preventDefault();
     let wordValue = word.value;
     wordDef.innerHTML = wordValue;
-    getDefinition(wordValue);
+    getDefinition(wordValue.toLowerCase());
   });
 
   word.addEventListener("focus", resetForm);
@@ -29,6 +29,7 @@ function eventListeners() {
 
 function getDefinition(qry) {
   console.log(qry);
+
   fetch(
     `${api.baseurl}/${qry}/definitions?limit=3&includeRelated=false&sourceDictionaries=webster&useCanonical=false&includeTags=false&api_key=${api.key}`
   )
@@ -41,7 +42,6 @@ function getDefinition(qry) {
 function displayDefinition(definitions) {
 
   wordDef.innerHTML = word.value;
-
   try {
     definitions.forEach((item) => {
       let elem = document.createElement("li");
@@ -55,7 +55,6 @@ function displayDefinition(definitions) {
     dictDefList.innerHTML =
       "It seems we don't have this word in our dictionary";
   }
-
 }
 
 function resetForm() {
