@@ -18,3 +18,10 @@ a {
 .definitions {
   padding-top: 1.5rem;
 }
+
+.good {
+  color: $bg-white;
+}
+.bad {
+  color: $error-color;
+}

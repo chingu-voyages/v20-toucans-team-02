@@ -269,6 +269,14 @@ a {
   padding-top: 1.5rem;
 }
 
+.good {
+  color: #ffffff;
+}
+
+.bad {
+  color: #fe7f9c;
+}
+
 section {
   display: -webkit-box;
   display: -ms-flexbox;
