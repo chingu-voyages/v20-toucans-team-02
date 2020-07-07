@@ -334,7 +334,6 @@ section .upper li::before {
 }
 
 section .words {
-  background-color: #25274d;
   color: #ffffff;
   border-radius: 5px;
   line-height: 2;
