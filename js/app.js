@@ -42,14 +42,12 @@ const game = () => {
   }
 
   const definition = fetchDefinition().then((definitions) => {
-    definitions.definitions.forEach((el) => {
-      for (i = 0; i < 3; i++) {
-        let elem = document.createElement("li");
-        elem.classList.add("definition");
-        elem.innerHTML = el;
-        list1.appendChild(elem);
-      }
-    }); 
+    definitions.definitions.slice(0, 3).forEach((el) => {
+      let elem = document.createElement("li");
+      elem.classList.add("definition");
+      elem.innerHTML = el;
+      list1.appendChild(elem);
+    });
   });
 
   const word = fetchRandomWord().then((wordsArr) => {
