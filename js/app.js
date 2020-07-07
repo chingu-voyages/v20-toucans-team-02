@@ -38,7 +38,7 @@ const fetchDefinition = async () => {
 
 const game = () => {
   for (let i = 0; i < 2; i++) {
-    fetchRandomWord();
+    setTimeout(fetchRandomWord(), 1000);
   }
 
   const definition = fetchDefinition().then((definitions) => {
@@ -52,7 +52,6 @@ const game = () => {
 
   const word = fetchRandomWord().then((wordsArr) => {
     wordsArr.forEach((el) => {
-      console.log(wordsArr);
       let elem = document.createElement("li");
       elem.classList.add("wordsItem", "pointer");
       elem.innerHTML = el;
@@ -71,8 +70,7 @@ const game = () => {
           });
         } else {
           if (win === false) {
-            console.log("wrong");
-            elem.innerHTML = `${el} That's not correct, Try again!`;
+            elem.innerHTML = `${el} <br>That's not correct... <br> Try again!`;
           }
         }
       });
