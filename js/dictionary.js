@@ -5,6 +5,7 @@ let wordDef = document.getElementById("word-def");
 const dictDefList = document.getElementById("dict-definitions");
 const section = document.getElementById('dictionary');
 
+
 // "https://api.wordnik.com/v4/words.json/wordOfTheDay?api_key="
 
 const api = {
@@ -47,11 +48,13 @@ function displayDefinition(definitions) {
       let elem = document.createElement("li");
       elem.classList.add("definition", "def-dict");
       elem.innerHTML = item.text;
-      dictDefList.style.color = "ffffff";
+      dictDefList.classList.remove('bad');
+      dictDefList.classList.add("good");
       dictDefList.appendChild(elem);
     });
   } catch {
-    dictDefList.style.color = "#fe7f9c";
+    dictDefList.classList.remove('good');
+    dictDefList.classList.add('bad');
     dictDefList.innerHTML =
       "It seems we don't have this word in our dictionary";
   }
