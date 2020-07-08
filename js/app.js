@@ -49,11 +49,11 @@ const definition = fetchDefinition().then((definitions) => {
     elem.innerHTML = el;
 
     elem.addEventListener("click", () => {
-      if (el === randomWord) {
+      if (el === randomWord && win === false) {
+        win = true;
         elem.innerHTML = `${el} <br> That's right!`;
         elem.classList.add("win");
         elem.classList.remove("wordsItem");
-        win = true;
         let restart = document.createElement("li");
         restart.classList.add("win", "pointer");
         restart.innerHTML = `Play again?`;
