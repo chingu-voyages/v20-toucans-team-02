@@ -234,6 +234,7 @@ a {
           align-items: center;
   padding: 5%;
   line-height: 1.5;
+  letter-spacing: 1px;
 }
 
 .word-definition .definitions {
@@ -271,6 +272,10 @@ a {
   padding: 0 2rem 2rem 1rem;
 }
 
+.definition, .words {
+  letter-spacing: 1px;
+}
+
 #word-def {
   letter-spacing: 2px;
   font-size: 1.5rem;
@@ -304,16 +309,17 @@ section {
           align-items: center;
   justify-content: center;
   min-width: 320px;
-  min-height: 100%;
+  min-height: 90%;
   border-radius: 5px;
-  padding: 5% 0;
-  background-color: #ffffff;
+  padding: 5%;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 @media screen and (min-width: 768px) {
   section {
     min-width: 650px;
     min-height: 75%;
+    max-width: 90%;
   }
 }
 
@@ -569,16 +575,11 @@ section .wordsItem {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2 / 3;
-}
-
-@media screen and (min-width: 576px) {
-  .page__main {
-    background-image: url(../images/blur-book.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-  }
+  background-image: url(../images/blur-book.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
 }
 
 .footer__authors {

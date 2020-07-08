@@ -6,9 +6,13 @@ a {
   @include flex-column;
   padding: 5%;
   line-height: 1.5;
+  letter-spacing: 1px;
   li {
     padding: 0 2rem 2rem 1rem;
   }
+}
+.definition,.words {
+  letter-spacing: 1px;
 }
 
 #word-def {
