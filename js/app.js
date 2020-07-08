@@ -7,32 +7,37 @@ const wordArr = [];
 let randomWord = "";
 
 const fetchDefinition = async () => {
-  const random = await axios.get(
-    "https://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=true&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&limit=3",
-    {
+  try {
+    const random = await axios.get(
+      "https://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=true&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&limit=3",
+      {
+        params: {
+          api_key: "ecfgi1h25l9ial3uiqu4e201aaor7odzentfuf3ruogimb1dc",
+        },
+      }
+    );
+
+    const wordArr = random.data.map((x) => x.word);
+    randomWord = wordArr[Math.floor(Math.random() * 3)];
+    const definitionURL = `https://api.wordnik.com/v4/word.json/${randomWord}/definitions`;
+
+    const wordDefinition = await axios.get(definitionURL, {
       params: {
         api_key: "ecfgi1h25l9ial3uiqu4e201aaor7odzentfuf3ruogimb1dc",
       },
-    }
-  );
-  const wordArr = random.data.map((x) => x.word);
-  console.log(wordArr);
-  randomWord = wordArr[Math.floor(Math.random() * 3)];
-  const definitionURL = `https://api.wordnik.com/v4/word.json/${randomWord}/definitions`;
+    });
+    return {
+      word: randomWord,
+      definitions: wordDefinition.data.map((x) => x.text),
+      wordArr: wordArr,
+    };
+  } catch (e) {
+    openErr();
+// create a button for reload with the timer, only when the timer is run out, you can click it.
 
-  const wordDefinition = await axios.get(definitionURL, {
-    params: {
-      api_key: "ecfgi1h25l9ial3uiqu4e201aaor7odzentfuf3ruogimb1dc",
-    },
-  });
-  console.log(`RandomWord: ${randomWord}`);
-  console.log(`Word Array: ${wordArr}`);
 
-  return {
-    word: randomWord,
-    definitions: wordDefinition.data.map((x) => x.text),
-    wordArr: wordArr,
-  };
+    // start a timer for 30 seconds, within that timer block the requests and show the error by default.
+  }
 };
 
 const definition = fetchDefinition().then((definitions) => {
@@ -67,10 +72,22 @@ const definition = fetchDefinition().then((definitions) => {
           elem.classList.add("failure");
           elem.classList.remove("wordsItem");
           failure = true;
-
         }
       }
     });
     showWord.appendChild(elem);
   });
 });
+
+const modalBgErr = document.querySelector(".modalBgErr");
+
+modalBgErr.style.display = "none";
+
+const openErr = () => {
+  modalBgErr.style.display = "block";
+};
+
+const closeErr = () => {
+  modalBgErr.style.display = "none";
+};
+

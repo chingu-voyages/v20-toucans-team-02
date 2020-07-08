@@ -85,8 +85,7 @@ input {
   border: 0;
   font-size: 100%;
   font: inherit;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   vertical-align: baseline;
 }
 
@@ -161,13 +160,10 @@ body {
   position: relative;
   overflow: hidden;
   min-height: 100%;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-      grid-template-areas: "header" "main" "footer";
-  -ms-grid-rows: auto 1fr auto;
-      grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: auto 1fr auto;
 }
 
 .hidden {
@@ -219,36 +215,24 @@ a {
 }
 
 .word-definition {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 5%;
   line-height: 1.5;
   letter-spacing: 1px;
 }
-
 .word-definition .definitions {
   list-style: none;
   counter-reset: li;
   padding-left: 2rem;
 }
-
 .word-definition li {
   counter-increment: li;
   margin: 0 0 0.5rem 0;
   position: relative;
 }
-
 .word-definition li::before {
   content: counter(li);
   border-radius: 50%;
@@ -267,7 +251,6 @@ a {
   line-height: calc(var(--size) - 0.9rem);
   top: 0;
 }
-
 .word-definition li {
   padding: 0 2rem 2rem 1rem;
 }
@@ -303,19 +286,10 @@ a {
 }
 
 section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   justify-content: center;
   min-width: 320px;
   min-height: 90%;
@@ -323,7 +297,6 @@ section {
   padding: 5%;
   background-color: rgba(255, 255, 255, 0.8);
 }
-
 @media screen and (min-width: 768px) {
   section {
     min-width: 650px;
@@ -331,19 +304,16 @@ section {
     max-width: 90%;
   }
 }
-
 @media screen and (min-width: 960px) {
   section {
     min-width: 850px;
   }
 }
-
 @media screen and (min-width: 1500px) {
   section {
     max-width: 1000px;
   }
 }
-
 section .upper {
   background-color: #25274d;
   color: #ffffff;
@@ -357,19 +327,16 @@ section .upper {
     max-width: 85%;
   }
 }
-
 section .upper .definitions {
   list-style: none;
   counter-reset: li;
   padding-left: 2rem;
 }
-
 section .upper li {
   counter-increment: li;
   margin: 0 0 0.5rem 0;
   position: relative;
 }
-
 section .upper li::before {
   content: counter(li);
   border-radius: 50%;
@@ -388,14 +355,12 @@ section .upper li::before {
   line-height: calc(var(--size) - 0.9rem);
   top: 0;
 }
-
 section .words {
   margin-top: 5%;
   text-align: center;
   width: 250px;
   min-height: 60px;
 }
-
 section .wordsItem,
 section .win {
   padding: 1rem 1.5rem;
@@ -404,11 +369,9 @@ section .win {
   color: white;
   cursor: pointer;
 }
-
 section .win {
   background-color: #2e9cca;
 }
-
 section .wordsItem {
   background-color: #25274d;
 }
@@ -426,14 +389,35 @@ section .wordsItem {
   border: 8px solid #25274d;
   border-radius: 5px;
 }
-
 .modalBg .game-desc {
   text-align: center;
   letter-spacing: 2px;
   font-size: 1.75rem;
 }
-
 .modalBg .help-desc {
+  padding-top: 1rem;
+  font-size: 1.15rem;
+}
+
+.modalBgErr {
+  width: 250px;
+  height: 350px;
+  position: absolute;
+  top: 90px;
+  background: #2e9cca;
+  color: white;
+  bottom: 80px;
+  left: 10px;
+  padding: 1.5rem;
+  border: 8px solid #25274d;
+  border-radius: 5px;
+}
+.modalBgErr .err {
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 1.75rem;
+}
+.modalBgErr .content {
   padding-top: 1rem;
   font-size: 1.15rem;
 }
@@ -441,40 +425,26 @@ section .wordsItem {
 .dictionary {
   background-color: #25274d;
   color: #ffffff;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 3fr;
-      grid-template-rows: 1fr 3fr;
+  grid-template-rows: 1fr 3fr;
   margin: 5% auto;
   overflow: auto;
 }
-
 @media screen and (min-width: 768px) {
   .dictionary {
     margin: 5%;
   }
 }
-
 @media screen and (min-width: 960px) {
   .dictionary {
     margin: 5% 10%;
   }
 }
-
 .dictionary .word-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   max-width: 350px;
   padding: 1% 0;
   justify-content: center;
@@ -482,25 +452,17 @@ section .wordsItem {
   margin: 0 auto;
   overflow: auto;
 }
-
 @media screen and (min-width: 768px) {
   .dictionary .word-form {
     max-width: 100%;
   }
 }
-
 #dict-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   margin: 1rem auto 2rem;
 }
-
-#dict-form input[type="text"] {
+#dict-form input[type=text] {
   line-height: 2;
   padding: 0.5rem 0.75rem 2px;
   outline: none;
@@ -508,8 +470,7 @@ section .wordsItem {
   border-bottom: 5px solid transparent;
   border-radius: 5px 0 0 5px;
 }
-
-#dict-form input[type="text"]:hover {
+#dict-form input[type=text]:hover {
   border-bottom: 5px solid #2e9cca;
 }
 
@@ -519,44 +480,27 @@ section .wordsItem {
   width: 100%;
   height: 60px;
   line-height: 60px;
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: header;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1 / 2;
+  grid-row: 1/2;
 }
-
 .page__header .nav__item {
   font-family: "Montserrat", sans-serif;
 }
-
 .page__header .app-name {
   font-size: 1.15rem;
   font-weight: bold;
   letter-spacing: 1px;
   color: #ffffff;
 }
-
 .page__header .navbar__menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   width: 100%;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
 @media screen and (min-width: 767.99px) {
   .page__header .navbar__menu {
     padding-left: 2.5rem;
@@ -572,25 +516,12 @@ section .wordsItem {
 }
 
 .page__main {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   grid-area: main;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2 / 3;
+  grid-row: 2/3;
   background-image: url(../images/blur-book.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -604,23 +535,18 @@ section .wordsItem {
   text-align: center;
   background-color: #25274d;
   line-height: 60px;
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
   grid-area: footer;
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 1;
-  grid-row: 3 / 4;
+  grid-row: 3/4;
 }
-
 .footer__authors .description__text {
   color: #ffffff;
   font-size: 1rem;
   font-family: "Raleway", sans-serif;
 }
-
 .footer__authors span,
 .footer__authors a {
   color: #fe7f9c;
   letter-spacing: 1px;
 }
+
 /*# sourceMappingURL=style.css.map */
