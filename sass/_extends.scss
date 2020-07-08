@@ -14,7 +14,10 @@
   color: $bg-white;
   border-radius: 5px;
   line-height: 2;
-  max-width: 85%;
+  @media screen and (min-width: $min-md){
+    max-width: 85%;
+  }
+  
 }
 
 @mixin bullets {

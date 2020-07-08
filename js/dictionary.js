@@ -57,6 +57,7 @@ function displayDefinition(definitions) {
     dictDefList.classList.add('bad');
     dictDefList.innerHTML =
       "It seems we don't have this word in our dictionary";
+    dictDefList.style.paddingLeft = "0px";
   }
 }
 
