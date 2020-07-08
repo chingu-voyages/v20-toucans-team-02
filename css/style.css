@@ -395,9 +395,9 @@ section .wordsItem {
 
 .modalBg {
   width: 250px;
-  height: 320px;
+  height: 350px;
   position: absolute;
-  bottom: 90px;
+  top: 90px;
   background: #2e9cca;
   color: white;
   bottom: 80px;
