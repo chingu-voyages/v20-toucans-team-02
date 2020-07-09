@@ -1,6 +1,7 @@
 const showDefinition = document.querySelector(".definition");
 const showWord = document.querySelector(".words");
 const list1 = document.querySelector(".definitions");
+const reload = document.querySelector(".reload");
 
 let win = false;
 const wordArr = [];
@@ -33,8 +34,7 @@ const fetchDefinition = async () => {
     };
   } catch (e) {
     openErr();
-// create a button for reload with the timer, only when the timer is run out, you can click it.
-
+    // create a button for reload with the timer, only when the timer is run out, you can click it.
 
     // start a timer for 30 seconds, within that timer block the requests and show the error by default.
   }
@@ -91,3 +91,6 @@ const closeErr = () => {
   modalBgErr.style.display = "none";
 };
 
+reload.addEventListener("click", () => {
+  location.reload();
+});
