@@ -84,7 +84,7 @@ section {
 }
 .modalBgErr {
   width: 250px;
-  height: auto;
+  height: 400px;
   position: absolute;
   top: 90px;
   background: $main-blue;
@@ -98,11 +98,19 @@ section {
   .err {
     text-align: center;
     letter-spacing: 2px;
-    font-size: 1.75rem;
+    font-size: 1.25rem;
   }
   .content {
     padding-top: 1rem;
-    font-size: 1.15rem;
+    font-size: 1rem;
+  }
+  @media screen and (max-width: $min-md) {
+    .err{
+      font-size: 1.75rem;
+    }
+    .content {
+      font-size: 1.25rem;
+    }
   }
   
 }

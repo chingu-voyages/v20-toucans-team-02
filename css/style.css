@@ -475,7 +475,7 @@ section .wordsItem {
 
 .modalBgErr {
   width: 250px;
-  height: auto;
+  height: 400px;
   position: absolute;
   top: 90px;
   background: #2e9cca;
@@ -490,12 +490,21 @@ section .wordsItem {
 .modalBgErr .err {
   text-align: center;
   letter-spacing: 2px;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
 }
 
 .modalBgErr .content {
   padding-top: 1rem;
-  font-size: 1.15rem;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .modalBgErr .err {
+    font-size: 1.75rem;
+  }
+  .modalBgErr .content {
+    font-size: 1.25rem;
+  }
 }
 
 .dictionary {
