@@ -475,7 +475,7 @@ section .wordsItem {
 
 .modalBgErr {
   width: 250px;
-  height: 400px;
+  height: auto;
   position: absolute;
   top: 90px;
   background: #2e9cca;
