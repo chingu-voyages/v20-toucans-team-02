@@ -1,6 +1,7 @@
 //some code to create a modal layer
 const helpBtn = document.querySelector(".helpBtn");
 const modalBg = document.querySelector(".modalBg");
+const closeBtn = document.querySelector(".closeBtn");
 
 modalBg.style.display = "none";
 
@@ -15,4 +16,5 @@ const closeHelp = () => {
 }
 
 helpBtn.addEventListener('click', openHelp);
+closeBtn.addEventListener('click', closeHelp);
 modalBg.addEventListener('click', closeHelp);

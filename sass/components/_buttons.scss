@@ -1,7 +1,7 @@
 #search {
   background-color: $main-blue;
   color: $bg-white;
-  padding: 0.45rem 1.25rem;
+  padding: 0.45rem 1rem;
   border: none;
   border-radius: 0 5px 5px 0;
   outline: none;
@@ -33,6 +33,23 @@
   cursor: pointer;
   letter-spacing: 1px;
   margin: auto;
+}
+
+.closeBtn {
+  position: absolute;
+  background: $main-blue;
+  border: none;
+  outline: none;
+  font-weight: bolder;
+  font-size: 1.15rem;
+  
+  letter-spacing: 3px;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+.closeBtn:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .reload {
